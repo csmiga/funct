@@ -8,52 +8,52 @@ LinkedIn: https://www.linkedin.com/in/csmiga/
 File:    funct.sh
 END
 
-declare FUNCT_CONF=$HOME/Projects/funct/conf/funct.conf
-declare FUNCT_BIN=/root/Projects/venv3/bin/behave
-declare FUNCT_FEATURES=/root/Projects/funct/lib/plutotv.features/
-declare FUNCT_PROC=$(pgrep behave)
+declare CONFIG=$HOME/Projects/funct/conf/funct.conf
+declare BIN=/root/Projects/venv3/bin/behave
+declare BEHAVIOR=/root/Projects/funct/lib/plutotv.features/
+declare PROCESS=$(pgrep behave)
 
 function funct_start () {
-    if [ -z "$FUNCT_PROC" ]
+    if [ -z "$PROCESS" ]
     then
-        local FUNCT_ARG=$(grep -Ev "^$|#" "$FUNCT_CONF" | \
+        local OPTION=$(grep -Ev "^$|#" "$CONFIG" | \
             awk -F\, '{print $2 "--" $1}' | awk 'ORS=" "')
-        $FUNCT_BIN $FUNCT_ARG $FUNCT_FEATURES 2> /dev/null &
-        local FUNCT_PID=$(pgrep behave)
-        echo "funct [ PID: $FUNCT_PID ] starting "
+        $BIN $OPTION $BEHAVIOR 2> /dev/null &
+        local PID=$(pgrep behave)
+        echo "funct [ PID: $PID ] starting "
         sleep 1
-        if [ -n "$FUNCT_PID" ]
+        if [ -n "$PID" ]
         then
-            echo "funct [ PID: $FUNCT_PID ] started "
+            echo "funct [ PID: $PID ] started "
         else
             echo "funct [ PID: None ] not running "
         fi
     else
-        echo "funct [ PID: $FUNCT_PROC ] running "
+        echo "funct [ PID: $PROCESS ] running "
     fi
 }
 
 function funct_status () {
-    if [ -n "$FUNCT_PROC" ]
+    if [ -n "$PROCESS" ]
     then
-        echo "funct [ PID: $FUNCT_PROC ] running "
+        echo "funct [ PID: $PROCESS ] running "
     else
         echo "funct [ PID: None ] not running "
     fi                       
 }
 
 function funct_stop () {
-    if [ -n "$FUNCT_PROC" ]
+    if [ -n "$PROCESS" ]
     then
-        echo "funct [ PID: $FUNCT_PROC ] stopping"
-        kill -SIGTERM "$FUNCT_PROC"
+        echo "funct [ PID: $PROCESS ] stopping"
+        kill -SIGTERM "$PROCESS"
         sleep 1
-        local FUNCT_PID=$(pgrep behave)
-        if [ -z "$FUNCT_PID" ]
+        local PID=$(pgrep behave)
+        if [ -z "$PID" ]
         then
             echo "funct [ PID: None ] stopped"
         else
-            echo "funct [ PID: $FUNCT_PID ] running "
+            echo "funct [ PID: $PID ] running "
         fi
     else
         echo "funct [ PID: None ] not running "
@@ -63,12 +63,12 @@ function funct_stop () {
 case "$1" in
     help)
         echo
-        echo "Binary: $($FUNCT_BIN --version)"
-        echo "Config: $(echo $FUNCT_CONF)"
+        echo "Binary: $($BIN --version)"
+        echo "Config: $(echo $CONFIG)"
         echo
         echo "Reading config file..."
         echo
-        cat $FUNCT_CONF
+        cat $CONFIG
         ;;
     start)
         funct_start
@@ -80,7 +80,7 @@ case "$1" in
         funct_status
         ;;
     version)
-        $FUNCT_BIN --version
+        $BIN --version
         ;;
 
     *)
