@@ -5,92 +5,88 @@ Author:   Christopher Smiga
 e-Mail:   CSmiga@yahoo.com
 LinkedIn: https://www.linkedin.com/in/csmiga/
 
-File:    nfunct.sh
+File:    funct.sh
 END
 
-declare NFUNCT_CONF=$HOME/Projects/nfunct/conf/nfunct.conf
-#declare NFUNCT_CONF=$HOME/Projects/nfunct_behaviors/plutotv/conf/plutotv.conf
-declare NFUNCT_BIN=/root/Projects/venv3/bin/locust
-declare NFUNCT_PROC=$(pgrep locust)
+declare FUNCT_CONF=$HOME/Projects/funct/conf/funct.conf
+declare FUNCT_BIN=/root/Projects/venv3/bin/behave
+declare FUNCT_PROC=$(pgrep behave)
 
-function nfunct_start () {
-    if [ -z "$NFUNCT_PROC" ]
+function funct_start () {
+    if [ -z "$FUNCT_PROC" ]
     then
-        local NFUNCT_ARG=$(grep -Ev "^$|#" "$NFUNCT_CONF" | \
+        local FUNCT_ARG=$(grep -Ev "^$|#" "$FUNCT_CONF" | \
             awk -F\, '{print $2 "--" $1}' | awk 'ORS=" "')
-        # Debug "nfunct start" using output.
-        #$NFUNCT_BIN $NFUNCT_ARG
-        # Process monitorng using "nfunct status".
-        $NFUNCT_BIN $NFUNCT_ARG 2> /dev/null &
-        local NFUNCT_PID=$(pgrep locust)
-        echo "nfunct [ PID: $NFUNCT_PID ] starting "
+        # Debug "funct start" using output.
+        #$FUNCT_BIN $FUNCT_ARG
+        # Process monitorng using "funct status".
+        $FUNCT_BIN $FUNCT_ARG 2> /dev/null &
+        local FUNCT_PID=$(pgrep behave)
+        echo "funct [ PID: $FUNCT_PID ] starting "
         sleep 1
-        if [ -n "$NFUNCT_PID" ]
+        if [ -n "$FUNCT_PID" ]
         then
-            echo "nfunct [ PID: $NFUNCT_PID ] started "
+            echo "funct [ PID: $FUNCT_PID ] started "
         else
-            echo "nfunct [ PID: None ] not running "
+            echo "funct [ PID: None ] not running "
         fi
     else
-        echo "nfunct [ PID: $NFUNCT_PROC ] running "
+        echo "funct [ PID: $FUNCT_PROC ] running "
     fi
 }
 
-function nfunct_status () {
-    if [ -n "$NFUNCT_PROC" ]
+function funct_status () {
+    if [ -n "$FUNCT_PROC" ]
     then
-        echo "nfunct [ PID: $NFUNCT_PROC ] running "
+        echo "funct [ PID: $FUNCT_PROC ] running "
     else
-        echo "nfunct [ PID: None ] not running "
+        echo "funct [ PID: None ] not running "
     fi                       
 }
 
-function nfunct_stop () {
-    if [ -n "$NFUNCT_PROC" ]
+function funct_stop () {
+    if [ -n "$FUNCT_PROC" ]
     then
-        echo "nfunct [ PID: $NFUNCT_PROC ] stopping"
-        kill -SIGTERM "$NFUNCT_PROC"
+        echo "funct [ PID: $FUNCT_PROC ] stopping"
+        kill -SIGTERM "$FUNCT_PROC"
         sleep 1
-        local NFUNCT_PID=$(pgrep locust)
-        if [ -z "$NFUNCT_PID" ]
+        local FUNCT_PID=$(pgrep behave)
+        if [ -z "$FUNCT_PID" ]
         then
-            echo "nfunct [ PID: None ] stopped"
+            echo "funct [ PID: None ] stopped"
         else
-            echo "nfunct [ PID: $NFUNCT_PID ] running "
+            echo "funct [ PID: $FUNCT_PID ] running "
         fi
     else
-        echo "nfunct [ PID: None ] not running "
+        echo "funct [ PID: None ] not running "
     fi
 }
 
 case "$1" in
     help)
         echo
-        echo "Binary: $($NFUNCT_BIN --version)"
-        echo "Config: $(echo $NFUNCT_CONF)"
+        echo "Binary: $($FUNCT_BIN --version)"
+        echo "Config: $(echo $FUNCT_CONF)"
         echo
         echo "Reading config file..."
         echo
-        cat $NFUNCT_CONF
-        ;;
-    list)
-        $NFUNCT_BIN --list --locustfile $(awk '/^locustfile/ {print $2}' $NFUNCT_CONF)
+        cat $FUNCT_CONF
         ;;
     start)
-        nfunct_start
+        funct_start
         ;;
     stop)
-        nfunct_stop
+        funct_stop
         ;;
     status)
-        nfunct_status
+        funct_status
         ;;
     version)
-        $NFUNCT_BIN --version
+        $FUNCT_BIN --version
         ;;
 
     *)
-        echo $"Usage: $0 {start|stop|status|list|version|help}"
+        echo $"Usage: $0 {start|stop|status|version|help}"
         exit 1
 esac
 
