@@ -9,8 +9,8 @@ File:    funct.sh
 END
 
 declare CONFIG=$HOME/Projects/funct/conf/funct.conf
-declare BIN=/root/Projects/venv3/bin/behave
 declare BEHAVIOR=/root/Projects/funct/lib/plutotv.features/
+declare BIN=/root/Projects/venv3/bin/behave
 declare PROCESS=$(pgrep behave)
 
 function funct_start () {
