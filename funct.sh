@@ -10,6 +10,7 @@ END
 
 declare FUNCT_CONF=$HOME/Projects/funct/conf/funct.conf
 declare FUNCT_BIN=/root/Projects/venv3/bin/behave
+declare FUNCT_FEATURES=/root/Projects/funct/lib/plutotv.features/
 declare FUNCT_PROC=$(pgrep behave)
 
 function funct_start () {
@@ -17,7 +18,7 @@ function funct_start () {
     then
         local FUNCT_ARG=$(grep -Ev "^$|#" "$FUNCT_CONF" | \
             awk -F\, '{print $2 "--" $1}' | awk 'ORS=" "')
-        $FUNCT_BIN $FUNCT_ARG
+        $FUNCT_BIN $FUNCT_ARG $FUNCT_FEATURES 2> /dev/null &
         local FUNCT_PID=$(pgrep behave)
         echo "funct [ PID: $FUNCT_PID ] starting "
         sleep 1
@@ -70,7 +71,7 @@ case "$1" in
         cat $FUNCT_CONF
         ;;
     start)
-        funct_start $2
+        funct_start
         ;;
     stop)
         funct_stop
