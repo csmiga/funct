@@ -17,10 +17,7 @@ function funct_start () {
     then
         local FUNCT_ARG=$(grep -Ev "^$|#" "$FUNCT_CONF" | \
             awk -F\, '{print $2 "--" $1}' | awk 'ORS=" "')
-        # Debug "funct start" using output.
-        #$FUNCT_BIN $FUNCT_ARG
-        # Process monitorng using "funct status".
-        $FUNCT_BIN $FUNCT_ARG 2> /dev/null &
+        $FUNCT_BIN $FUNCT_ARG
         local FUNCT_PID=$(pgrep behave)
         echo "funct [ PID: $FUNCT_PID ] starting "
         sleep 1
@@ -73,7 +70,7 @@ case "$1" in
         cat $FUNCT_CONF
         ;;
     start)
-        funct_start
+        funct_start $2
         ;;
     stop)
         funct_stop
@@ -86,7 +83,8 @@ case "$1" in
         ;;
 
     *)
-        echo $"Usage: $0 {start|stop|status|version|help}"
+        echo "Usage: $0 {start|stop|status|version|help}"
+        echo 
         exit 1
 esac
 
