@@ -1,29 +1,32 @@
 import time
-import os.path
+import os
 from selenium import webdriver
 from behave import *
 
 @given('firefox web browser is installed')
-def step(context):
+def step_impl(context):
     if os.path.isfile('/usr/bin/firefox'):
-        print ("File exist")
+        return "pass"
     else:
-        print ("File does not exist")
+        return "fail"
+    #pass
 
 @when('plutotv is reachable')
-def step(context):
+def step_impl(context):
+    #assert True is not False
+    #assert context.failed is False
     pass
 
 @then('test plutotv main page')
-def step(context):
-    options = webdriver.FirefoxOptions()
-    options.add_argument('--headless')
-    options.binary_location = '/usr/bin/firefox'
+def step_impl(context):
+    option = webdriver.FirefoxOptions()
+    option.add_argument('--headless')
+    option.binary_location = '/usr/bin/firefox'
 
-    driver = webdriver.Firefox(firefox_options=options)
-    driver.get('https://pluto.tv/')
+    browser = webdriver.Firefox(firefox_options=option)
+    browser.get('https://pluto.tv/')
 
-    #print(driver.page_source)
-    print("Title: %s" % driver.title)
+    print(browser.page_source)
+    #print("Title: %s" % browser.title)
     time.sleep(3)
-    driver.quit()
+    browser.quit()

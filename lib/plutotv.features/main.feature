@@ -1,4 +1,4 @@
-Feature: showing off behave
+Feature: validate connectivity to plutotv
 
     Scenario: run a simple test at plutotv
         Given firefox web browser is installed
