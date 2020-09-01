@@ -9,7 +9,6 @@ def step_impl(context):
         return "pass"
     else:
         return "fail"
-    #pass
 
 @when('plutotv is reachable')
 def step_impl(context):
