@@ -2,14 +2,13 @@
 # BETTER: Use Fixture for this example.
 
 from behave.fixture import use_fixture_by_tag
+from configparser import ConfigParser
+from helper.helper_web import get_browser
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from configparser import ConfigParser
 
 import os
 import time
-
-from helper.helper_web import get_browser
 
 def before_all(context):
     config = ConfigParser()
