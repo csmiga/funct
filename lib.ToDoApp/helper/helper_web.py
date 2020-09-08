@@ -14,7 +14,7 @@ class HelperFunc(object):
         self._driver.get(url)
 
     def maximize(self):
-        self._driver.maximize_window()        
+        self._driver.maximize_window()
 
     def close(self):
         self._driver.quit()
