@@ -1,6 +1,8 @@
 # https://jenisys.github.io/behave.example/tutorials/tutorial01.html
 #
 # file: features/tutorial01_basics.feature
+#
+# Goal: Show basics, make first steps
 
 Feature: Showing off behave (tutorial01)
 
