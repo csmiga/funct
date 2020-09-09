@@ -5,4 +5,8 @@
 # 
 # Goal: Use another spoken language for testing (other than English)
 
-behave ../features/tutorial12_spoken_language.feature
+# Automatic language selection (via feature-file language marker):
+#behave ../features/tutorial12_spoken_language.feature
+
+# Explicit language selection via command-line usage of --lang=${lang}:
+behave --lang=de ../features/tutorial12_spoken_language.feature
