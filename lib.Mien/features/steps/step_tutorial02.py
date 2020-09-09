@@ -1,6 +1,17 @@
 # https://jenisys.github.io/behave.example/tutorials/tutorial02.html
 #
-# file:features/steps/step_tutorial02.py
+# file: features/steps/step_tutorial02.py
+
+# Normally, the domain model is the
+#
+#    class-under-test (CUT)
+#    subsystem-under-test
+#    system-under-test (SUT)
+#
+# It contains the business logic that describes the behaviour of the system. The
+# thin test automation layer from above (step definitions) just interacts with
+# it. The domain model normally preexists (in another Python module/package) and
+# you do not have to write it.
 
 # @mark.domain_model
 # ----------------------------------------------------------------------------
