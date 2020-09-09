@@ -1,3 +1,4 @@
+# Tutorial 6: Setup Table
 # https://jenisys.github.io/behave.example/tutorials/tutorial06.html
 #
 # file: features/steps/step_tutorial06.py
