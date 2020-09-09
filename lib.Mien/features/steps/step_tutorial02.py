@@ -63,3 +63,17 @@ def step_attacked_by(context, opponent):
 @then('the ninja should {reaction}')
 def step_the_ninja_should(context, reaction):
     assert_that(reaction, equal_to(context.ninja_fight.decision()))
+
+# ----------------------------------------------------------------------------
+# BACKGROUND-STEPS: Needed for tutorial09
+# ----------------------------------------------------------------------------
+@given('the ninja encounters another opponent')
+def step_the_ninja_encounters_another_opponent(context):
+    """
+    BACKGROUND steps are called at begin of each scenario before other steps.
+    """
+    # -- SETUP/TEARDOWN:
+    if hasattr(context, "ninja_fight"):
+        # -- VERIFY: Double-call does not occur.
+        assert_that(context.ninja_fight, is_not(equal_to(None)))
+    context.ninja_fight = None
