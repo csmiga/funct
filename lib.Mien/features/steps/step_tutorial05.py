@@ -27,7 +27,7 @@ class Frobulator(object):
 # ----------------------------------------------------------------------------
 # STEPS:
 # ----------------------------------------------------------------------------
-from behave   import given, when, then
+from behave import given, when, then
 from hamcrest import assert_that, equal_to
 
 @given('a sample text loaded into the frobulator')
