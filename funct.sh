@@ -9,7 +9,7 @@ File:    funct.sh
 END
 
 declare CONFIG=$HOME/Projects/funct/conf/funct.conf
-declare BEHAVIOR=/root/Projects/funct/lib.plutotv/features/
+declare FEATURE=/root/Projects/funct/lib.plutotv/features/
 declare BIN=/root/Projects/venv3/bin/behave
 declare PROCESS=$(pgrep behave)
 
@@ -18,7 +18,7 @@ function funct_start () {
     then
         local OPTION=$(grep -Ev "^$|#" "$CONFIG" | \
             awk -F\, '{print $2 "--" $1}' | awk 'ORS=" "')
-        $BIN $OPTION $BEHAVIOR 2> /dev/null &
+        $BIN $OPTION $FEATURE 2> /dev/null &
         local PID=$(pgrep behave)
         echo "funct [ PID: $PID ] starting "
         sleep 1
