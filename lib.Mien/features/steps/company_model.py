@@ -1,7 +1,14 @@
+# File: features/steps/company_model.py
+#
+# Tutorial 6: Setup Table
 # https://jenisys.github.io/behave.example/tutorials/tutorial06.html
+#
+# Goal: Use setup tables to simplify test setup.
+#
+# Tutorial 7: Result Table
 # https://jenisys.github.io/behave.example/tutorials/tutorial07.html
 #
-# file: features/steps/company_model.py
+# Goal: Use result tables to simplify comparison of an expected dataset.
 
 # -----------------------------------------------------------------------------
 # DOMAIN-MODEL:

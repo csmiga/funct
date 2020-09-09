@@ -1,6 +1,9 @@
+# File: features/steps/testutil.py
+#
+# Tutorial 6: Setup Table
 # https://jenisys.github.io/behave.example/tutorials/tutorial06.html
 #
-# file: features/steps/testutil.py
+# Goal: Use setup tables to simplify test setup.
 
 # ----------------------------------------------------------------------------
 # TEST SUPPORT:

@@ -1,8 +1,16 @@
+# File: features/steps/step_tutorial02.py
+#
 # Tutorial 2: Natural Language
 # https://jenisys.github.io/behave.example/tutorials/tutorial02.html
 #
-# file: features/steps/step_tutorial02.py
-
+# Goal: Use natural language when writing tests.
+#
+# Tutorial 9: Use Background
+# https://jenisys.github.io/behave.example/tutorials/tutorial09.html
+#
+# Goal: Use the Background concept to execute a number of steps before each
+#     scenario.
+#
 # Normally, the domain model is the
 #
 #    class-under-test (CUT)

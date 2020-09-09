@@ -1,7 +1,9 @@
+# File: features/steps/step_tutorial07.py
+#
 # Tutorial 7: Result Table
 # https://jenisys.github.io/behave.example/tutorials/tutorial07.html
 #
-# file: features/steps/step_tutorial07.py
+# Goal: Use result tables to simplify comparison of an expected dataset.
 
 # ----------------------------------------------------------------------------
 # STEPS:

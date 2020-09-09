@@ -1,7 +1,7 @@
+# File: features/tutorial07_step_result_table.feature
+#
 # Tutorial 7: Result Table
 # https://jenisys.github.io/behave.example/tutorials/tutorial07.html
-#
-# file: features/tutorial07_step_result_table.feature
 #
 # Goal: Use result tables to simplify comparison of an expected dataset.
 #

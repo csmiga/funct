@@ -1,7 +1,9 @@
+# File: features/steps/step_tutorial08.py
+#
 # Tutorial 8: Execute Other Steps in a Step
 # https://jenisys.github.io/behave.example/tutorials/tutorial08.html
 #
-# file:features/steps/step_tutorial08.py
+# Goal: Reuse a sequence of existing steps as a step-macro.
 
 # ----------------------------------------------------------------------------
 # STEPS:

@@ -1,7 +1,9 @@
+# File: features/steps/step_tutorial01.py
+#
 # Tutorial 1: First Steps
 # https://jenisys.github.io/behave.example/tutorials/tutorial01.html
 #
-# file: features/steps/step_tutorial01.py
+# Goal: Show basics, make first steps
 
 # ----------------------------------------------------------------------------
 # STEPS:

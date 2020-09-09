@@ -1,6 +1,9 @@
+# File: features/steps/blender.py
+#
+# Tutorial 3: Step Parameters
 # https://jenisys.github.io/behave.example/tutorials/tutorial03.html
 #
-# file:features/steps/blender.py
+# Goal: Use step parameter to handover parameters to step functions.
 
 # -----------------------------------------------------------------------------
 # DOMAIN-MODEL:

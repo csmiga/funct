@@ -1,7 +1,7 @@
+# File: features/tutorial09_background.feature
+#
 # Tutorial 9: Use Background
 # https://jenisys.github.io/behave.example/tutorials/tutorial09.html
-#
-# file: features/tutorial09_background.feature
 #
 # Goal: Use the Background concept to execute a number of steps before each
 #     scenario.

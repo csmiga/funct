@@ -1,7 +1,7 @@
+# File: features/tutorial06_step_setup_table.feature
+#
 # Tutorial 6: Setup Table
 # https://jenisys.github.io/behave.example/tutorials/tutorial06.html
-#
-# file: features/tutorial06_step_setup_table.feature
 #
 # Goal: Use setup tables to simplify test setup.
 

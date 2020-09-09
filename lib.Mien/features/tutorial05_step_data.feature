@@ -1,7 +1,7 @@
+# File: features/tutorial05_step_data.feature
+#
 # Tutorial 5: Multi-line Text (Step Data)
 # https://jenisys.github.io/behave.example/tutorials/tutorial05.html
-#
-# file:features/tutorial05_step_data.feature
 #
 # Goal: Use multi-line text (with tripple-quoted text) for large text sections.
 #

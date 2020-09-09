@@ -1,7 +1,7 @@
+# File: features/tutorial02_natural_language.feature
+#
 # Tutorial 2: Natural Language
 # https://jenisys.github.io/behave.example/tutorials/tutorial02.html
-#
-# file: features/tutorial02_natural_language.feature
 #
 # Goal: Use natural language when writing tests.
 #
