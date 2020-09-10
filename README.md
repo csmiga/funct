@@ -34,7 +34,7 @@ Functional testing differs from system testing in that functional testing "verif
 
 ### Six Steps
 
-  Functional testing typically involves six steps[citation needed]
+  Functional testing typically involves six steps
   1. The identification of functions that the software is expected to perform
   2. The creation of input data based on the function's specifications
   3. The determination of output based on the function's specifications
