@@ -18,11 +18,11 @@ requirement.
 
 Functional testing is a quality assurance (QA) process and a type of black-box testing that bases its test cases on the specifications of the software component under test. Functions are tested by feeding them input and examining the output, and internal program structure is rarely considered (unlike white-box testing). Functional testing is conducted to evaluate the compliance of a system or component with specified functional requirements. Functional testing usually describes what the system does.
 
-Since functional testing is a type of black-box testing, the software's functionality can be tested without knowing the internal workings of the software. This means that testers do not need to know programming languages or how the software has been implemented. This, in turn, could lead to reduced developer-bias (or confirmation bias) in testing since the tester has not been involved in the software's development.[4]
+Since functional testing is a type of black-box testing, the software's functionality can be tested without knowing the internal workings of the software. This means that testers do not need to know programming languages or how the software has been implemented. This, in turn, could lead to reduced developer-bias (or confirmation bias) in testing since the tester has not been involved in the software's development.
 
 Functional testing does not imply that you are testing a function (method) of your module or class. Functional testing tests a slice of functionality of the whole system.
 
-Functional testing differs from system testing in that functional testing "verifies a program by checking it against ... design document(s) or specification(s)", while system testing "validate[s] a program by checking it against the published user or system requirements."[5] Notebooks" directory exist.
+Functional testing differs from system testing in that functional testing "verifies a program by checking it against ... design document(s) or specification(s)", while system testing "validate a program by checking it against the published user or system requirements."
  
 ### Types
 
@@ -46,4 +46,3 @@ Functional testing differs from system testing in that functional testing "verif
   [what_is_functional_testing]: <https://github.com/csmiga/funct/blob/master/README.md#what-is-functional-testing>
   [types]: <https://github.com/csmiga/funct/blob/master/README.md#types>
   [six_steps]: <https://github.com/csmiga/funct/blob/master/README.md#six-steps>
-  [other_testing]: <https://github.com/csmiga/funct/blob/master/README.md#other-testing>
