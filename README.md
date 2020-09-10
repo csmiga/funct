@@ -6,7 +6,7 @@ automated user acceptence testing (UAT). Automated testing adds value in a softw
 (CI/CD) or other practices. Speed of delivery while maintaining quaility is the
 requirement.
 
-*Free Development Environment + Free Software = Opportunity*
+*Open Source Software (OSS) = Opportunity*
 
 ### Contents
 
