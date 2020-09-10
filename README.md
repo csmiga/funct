@@ -58,7 +58,7 @@ Functional testing differs from system testing in that functional testing "verif
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-  [what_is_functional_testing]: <https://github.com/csmiga/funct/blob/master/README.md#what_is_functional_testing>
+  [what_is_functional_testing]: <https://github.com/csmiga/funct/blob/master/README.md#what-is-functional-testing>
   [types]: <https://github.com/csmiga/funct/blob/master/README.md#types>
-  [six_steps]: <https://github.com/csmiga/funct/blob/master/README.md#six_steps>
-  [other_testing]: <https://github.com/csmiga/funct/blob/master/README.md#other_testing>
+  [six_steps]: <https://github.com/csmiga/funct/blob/master/README.md#six-steps>
+  [other_testing]: <https://github.com/csmiga/funct/blob/master/README.md#other-testing>
