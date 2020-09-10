@@ -4,7 +4,7 @@
 funct is a functional test framework utilizing Python, Behave, and Selenium for
 automated user acceptence testing (UAT). Automated testing adds value in a software development life cycle (SDLC) using continuous integration and continuous delivery
 (CI/CD) or other practices. Speed of delivery while maintaining quaility is the
-vision.
+requirement.
 
 *Free Development Environment + Free Software = Opportunity*
 
@@ -13,7 +13,6 @@ vision.
   * [What is functional testing][what_is_functional_testing]
   * [Types][types]
   * [Six Steps][six_steps]
-  * [Other Testing][other_testing]
 
 ### What is functional testing
 
@@ -41,20 +40,6 @@ Functional testing differs from system testing in that functional testing "verif
   4. The execution of the test case
   5. The comparison of actual and expected outputs
   6. To check whether the application works as per the customer need.
-
-### Other Testing
-
-  * Non-functional testing
-  * Acceptance testing
-  * Regression testing
-  * System testing
-  * Software testing
-  * Integration testing
-  * Unit testing
-  * Database testing
-  * Security testing
-  * Load testing
-  * Test automation
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
