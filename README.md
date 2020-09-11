@@ -3,7 +3,7 @@
 
 funct is a functional test framework utilizing Python, Behave, and Selenium for
 automated user acceptence testing (UAT). Automated testing adds value in a software development life cycle (SDLC) using continuous integration and continuous delivery
-(CI/CD) or other practices. Speed of delivery while maintaining quaility is the
+(CI/CD) practices. Speed of delivery while maintaining quaility is the
 requirement.
 
 *Open Source Software (OSS) = Opportunity*
