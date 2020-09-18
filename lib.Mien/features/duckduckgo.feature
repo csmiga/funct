@@ -1,6 +1,9 @@
 # Python Testing 101: behave
 # https://automationpanda.com/2018/05/11/python-testing-101-behave/
 
+# Mentoring Software Testers
+# https://automationpanda.com/2020/07/28/mentoring-software-testers/
+
 @web @duckduckgo
 Feature: DuckDuckGo Web Browsing
     As a web surfer,
