@@ -18,6 +18,11 @@ def step_impl(context):
 
 @then('test pluto.tv main page')
 def step_impl(context):
+    
+
+
+@then('test pluto.tv main page')
+def step_impl(context):
     option = webdriver.FirefoxOptions()
     option.add_argument('--headless')
     option.binary_location = '/usr/bin/firefox'
