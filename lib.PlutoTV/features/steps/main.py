@@ -10,13 +10,13 @@ def step_impl(context):
     else:
         return "fail"
 
-@when('plutotv is reachable')
+@when('pluto.tv is reachable')
 def step_impl(context):
     #assert True is not False
     #assert context.failed is False
     pass
 
-@then('test plutotv main page')
+@then('test pluto.tv main page')
 def step_impl(context):
     option = webdriver.FirefoxOptions()
     option.add_argument('--headless')
