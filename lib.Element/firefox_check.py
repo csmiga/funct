@@ -9,7 +9,7 @@ try:
     options.binary_location = '/usr/bin/firefox'
 
     driver = webdriver.Firefox(firefox_options=options)
-    driver.get('http://codepad.org')
+    driver.get('http://www.google.com')
 
     #print(driver.page_source)
     print("Title: %s" % driver.title)

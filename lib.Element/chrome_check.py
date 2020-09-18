@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-
 from selenium import webdriver
 
 try:
@@ -13,7 +12,7 @@ try:
     options.binary_location = '/usr/bin/chromium-browser'
 
     driver = webdriver.Chrome('/usr/bin/chromedriver',chrome_options=options)
-    driver.get('http://codepad.org')
+    driver.get('http://www.google.com')
 
     #print(driver.page_source)
     print("Title: %s" % driver.title)
