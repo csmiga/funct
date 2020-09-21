@@ -46,4 +46,4 @@ Functional testing differs from system testing in that functional testing "verif
   [what_is_functional_testing]: <https://github.com/csmiga/funct/blob/master/README.md#what-is-functional-testing>
   [types]: <https://github.com/csmiga/funct/blob/master/README.md#types>
   [six_steps]: <https://github.com/csmiga/funct/blob/master/README.md#six-steps>
- 
+  
