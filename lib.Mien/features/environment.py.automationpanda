@@ -2,9 +2,13 @@ from selenium import webdriver
  
 def before_scenario(context, scenario):
   if 'web' in context.tags:
-    context.browser = webdriver.Firefox()
+    options = webdriver.FirefoxOptions()
+    options.add_argument('--headless')
+    options.binary_location = '/usr/bin/firefox'
+
+    context.browser = webdriver.Firefox(firefox_options=options)
     context.browser.implicitly_wait(10)
- 
+
 def after_scenario(context, scenario):
   if 'web' in context.tags:
     context.browser.quit()
